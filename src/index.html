@@ -1,23 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
-    <link rel="stylesheet" href="./css/styles.css" />
-  </head>
-  <body>
-    <load src="./partials/header.html" icon-path="img/sprite.svg#logo" />
 
-    <main>
-      <!-- Loads the specified .html file -->
-      <load src="./partials/vite-promo.html" />
-      <load src="./partials/badges.html" />
-    </main>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery</title>
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
 
-    <load src="./partials/footer.html" />
+<body>
 
-    <script type="module" src="./main.js"></script>
-  </body>
+  <main>
+    <form id="search-form">
+      <input type="text" name="searchQuery" placeholder="Search images..." required />
+      <button type="submit">Search</button>
+    </form>
+
+    <div class="gallery"></div>
+    <button id="load-more" style="display:none;">Load more</button>
+    <div id="loader" style="display:none;">Loading images, please wait...</div>
+    
+
+  </main>
+
+
+  <script type="module" src="./main.js"></script>
+</body>
+
 </html>
